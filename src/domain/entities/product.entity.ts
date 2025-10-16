@@ -71,11 +71,11 @@ export class Product{
     static fromPrimitives(data:any): Product{
         return new Product(
             data.id,
-            new ProductName(data.name),
+            data.name,
             data.description,
-            new Price(data.price),
-            new Cost(data.cost),
-            new StockQuantity(data.stock_quantity),
+            data.price,
+            data.cost,
+            data.stock_quantity,
             data.category_id,
             new Date(data.created_at),
             new Date(data.updated_at)

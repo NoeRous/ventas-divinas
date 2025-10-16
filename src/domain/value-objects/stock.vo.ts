@@ -4,6 +4,8 @@ export class StockQuantity{
         private quantity:number
     ){
         if(quantity < 0) throw new Error('La cantidad no puede ser negativa');
+
+        if(quantity == 0) throw new Error('La cantidad no puede ser 0');
     }
 
     getValue():number{
